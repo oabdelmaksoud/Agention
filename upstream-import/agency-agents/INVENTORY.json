@@ -1,0 +1,20 @@
+{
+  "total_files": 91,
+  "markdown_files": 84,
+  "by_top_area_markdown": {
+    "README.md": 1,
+    "CONTRIBUTING.md": 1,
+    "design": 7,
+    "spatial-computing": 6,
+    "project-management": 5,
+    "specialized": 7,
+    "product": 3,
+    "testing": 8,
+    "support": 6,
+    "examples": 4,
+    ".github": 1,
+    "marketing": 11,
+    "engineering": 8,
+    "strategy": 16
+  }
+}

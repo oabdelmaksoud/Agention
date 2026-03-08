@@ -1,0 +1,3 @@
+repo: https://github.com/msitarzewski/agency-agents.git
+commit: 5e32f1d1ac206dde20120af1c4fb667244824b31
+license: MIT
