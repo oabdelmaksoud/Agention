@@ -1,5 +1,5 @@
 # Agention ⚡ ⚡
-[![Agention Logo](./assets/logo.svg)](https://github.com/oabdelmaksoud/Agention)
+[<img src="assets/logo.svg" width="48" height="48">](https://github.com/oabdelmaksoud/Agention)
  for OpenClaw
 
 > **Portable execution intelligence for OpenClaw**  
