@@ -57,3 +57,18 @@
 | `design/design-ux-researcher.md` | adapt-reference | ecc-frontend-patterns, ecc-liquid-glass-design, ecc-frontend-slides, ecc-cmd-plan | import design references + bridge skill |
 | `design/design-visual-storyteller.md` | adapt-reference | ecc-frontend-patterns, ecc-liquid-glass-design, ecc-frontend-slides, ecc-cmd-plan | import design references + bridge skill |
 | `design/design-whimsy-injector.md` | adapt-reference | ecc-frontend-patterns, ecc-liquid-glass-design, ecc-frontend-slides, ecc-cmd-plan | import design references + bridge skill |
+| `support/support-analytics-reporter.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `support/support-executive-summary-generator.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `support/support-finance-tracker.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `support/support-infrastructure-maintainer.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `support/support-legal-compliance-checker.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `support/support-support-responder.md` | adapt-reference | ecc-cmd-checkpoint, ecc-cmd-orchestrate, ecc-role-chief-of-staff | import support references + bridge skill |
+| `product/product-feedback-synthesizer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-projects, ecc-cmd-orchestrate, ecc-role-planner | import product references + bridge skill |
+| `product/product-sprint-prioritizer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-projects, ecc-cmd-orchestrate, ecc-role-planner | import product references + bridge skill |
+| `product/product-trend-researcher.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-projects, ecc-cmd-orchestrate, ecc-role-planner | import product references + bridge skill |
+| `spatial-computing/macos-spatial-metal-engineer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
+| `spatial-computing/terminal-integration-specialist.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
+| `spatial-computing/visionos-spatial-engineer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
+| `spatial-computing/xr-cockpit-interaction-specialist.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
+| `spatial-computing/xr-immersive-developer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
+| `spatial-computing/xr-interface-architect.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-verify, ecc-cmd-orchestrate | import spatial references + bridge skill |
