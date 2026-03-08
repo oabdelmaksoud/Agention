@@ -1,200 +1,120 @@
-# SuperClaw 🦞
+# SuperClaw
 
-[![Repo](https://img.shields.io/badge/repo-SuperClaw-111827?logo=github)](https://github.com/oabdelmaksoud/SuperClaw)
-[![License](https://img.shields.io/badge/license-MIT-success)](./LICENSE.upstream)
-[![OpenClaw](https://img.shields.io/badge/runtime-OpenClaw-0ea5e9)](https://docs.openclaw.ai)
-[![Install Wizard](https://img.shields.io/badge/install-wizard-blueviolet)](./scripts/install-wizard.sh)
-[![Compat](https://img.shields.io/badge/compat-ECC%20%2B%20Agency-22c55e)](#compatibility-model-important)
+SuperClaw is an OpenClaw-native compatibility pack that brings high-value workflow patterns from **Everything Claude Code (ECC)** into a reusable OpenClaw setup.
 
-**Turn OpenClaw into an execution-grade multi-agent system with ECC + Agency patterns.**
-
-SuperClaw is a high-signal compatibility pack that combines:
-- **ECC-style operational rigor** (plan → execute → verify → harden)
-- **Agency-style domain playbooks** (engineering, testing, strategy, product, marketing, design, support, spatial)
-- **OpenClaw-native runtime compatibility** (skills, roles, hooks, MCP profiles, validation suites)
+> **Acknowledgement:** This project is deeply inspired by and adapted from [`affaan-m/everything-claude-code`](https://github.com/affaan-m/everything-claude-code). See `upstream/NOTICE` and `upstream/SOURCE_PIN.txt` for attribution and source pinning.
 
 ---
 
+## What SuperClaw Includes
 
-```text
-┌──────────────────────┐    +    ┌────────────────────────┐
-│ ECC execution rigor  │         │ Agency domain playbooks│
-│ plan/verify/security │         │ eng/test/strategy/etc. │
-└──────────┬───────────┘         └───────────┬────────────┘
-           │                                   │
-           └──────────────┬────────────────────┘
-                          ▼
-                 ┌────────────────────┐
-                 │   SuperClaw Core   │
-                 │ OpenClaw-native    │
-                 │ skills + runtime   │
-                 └─────────┬──────────┘
-                           ▼
-                Reliable multi-agent execution
-```
-
-## Why people use SuperClaw
-
-Most agent setups fail in one of two ways:
-1. Great prompts, weak execution discipline
-2. Great architecture, weak domain specialization
-
-SuperClaw gives you both:
-- **Execution backbone** from ECC patterns
-- **Domain intelligence** from Agency playbooks
-- **OpenClaw-native integration** so it actually runs where you need it
+- **121 ECC-derived OpenClaw skills**
+  - command skills (`ecc-cmd-*`)
+  - role skills (`ecc-role-*`)
+  - domain skills (`ecc-*`)
+- **OpenClaw-compatible runtime layers**
+  - contexts (`contexts/`)
+  - hook intent mapping (`hooks/`)
+  - MCP profiles via mcporter (`mcp-configs/`)
+  - schemas (`schemas/`)
+- **Validation + operations scripts**
+  - verify / quality gate / security scan / eval
+  - acceptance runners
+  - compatibility smoke runners
+  - install wizard
 
 ---
 
-## What’s inside
+## Why this exists
 
-### ✅ Core Pack
-- **121+ OpenClaw skills** (`ecc-cmd-*`, `ecc-role-*`, `ecc-*`)
-- role-specialized workflows (planner, architect, security reviewer, etc.)
-- verification/security/quality-gate discipline
+ECC contains strong operational patterns (planning, verification, security discipline, orchestration). SuperClaw translates those patterns into **OpenClaw-native behavior** instead of trying to clone harness-specific internals 1:1.
 
-### ✅ Runtime Compatibility Layer
-- `contexts/` (dev, research, review)
-- `hooks/` (intent mapping)
-- `mcp-configs/` (mcporter profiles)
-- `schemas/` (validation)
-
-### ✅ Agency Bridge Layer
-- `ecc-agency-engineering`
-- `ecc-agency-testing`
-- `ecc-agency-strategy`
-- `ecc-agency-project-management`
-- `ecc-agency-marketing`
-- `ecc-agency-design`
-- `ecc-agency-support`
-- `ecc-agency-product`
-- `ecc-agency-spatial-computing`
+This gives you practical compatibility where it matters:
+- same workflow intent
+- OpenClaw tooling and execution model
+- reproducible checks and reports
 
 ---
 
-
-## Start here
-
-If you only do one thing:
+## Install (Recommended)
 
 ```bash
 bash scripts/install-wizard.sh
 ```
 
-Then run:
+The wizard can:
+- install skills globally to `~/.openclaw/skills`
+- sync runtime assets to `~/.openclaw/ecc-runtime`
+- apply MCP profile through mcporter
+- run quick validation checks
+
+### Non-interactive mode
 
 ```bash
-bash scripts/run-compat-smoke.sh
-```
-
-## 60-second install
-
-```bash
-git clone https://github.com/oabdelmaksoud/SuperClaw.git
-cd SuperClaw
-bash scripts/install-wizard.sh
-```
-
-Then in OpenClaw: start a new session (`/new`) to refresh skill discovery.
-
-### Non-interactive install
-
-```bash
-NONINTERACTIVE=1 bash scripts/install-wizard.sh --profile standard
+NONINTERACTIVE=1 bash scripts/install-wizard.sh
 ```
 
 ---
 
-## Install Wizard (enhanced)
+## Manual Install
 
 ```bash
-# Interactive
-bash scripts/install-wizard.sh
+mkdir -p ~/.openclaw/skills
+rsync -a --delete skills/ ~/.openclaw/skills/
 
-# Dry run
-bash scripts/install-wizard.sh --dry-run
-
-# Status check
-bash scripts/install-wizard.sh --status
-
-# Strict MCP profile
-bash scripts/install-wizard.sh --profile strict
-
-# Uninstall
-bash scripts/install-wizard.sh --uninstall
+bash scripts/integrate-openclaw-runtime.sh
+bash scripts/apply-mcporter-profile.sh standard
 ```
+
+Then start a new OpenClaw session (`/new`) to refresh skill discovery.
 
 ---
 
-## Proof it works
-
-Run the compatibility checks:
+## Validate Installation
 
 ```bash
+openclaw skills info ecc-cmd-plan
 bash scripts/run-compat-smoke.sh
 bash scripts/run-compat-acceptance.sh
 ```
 
-Optional deeper checks:
+---
 
-```bash
-bash scripts/run-acceptance.sh tests/acceptance/core95.json
-bash scripts/run-agent-scenarios.sh AGENT_SCENARIO_MATRIX.md
-```
+## Project Structure
 
-See reports:
-- `COMPAT_VALIDATION_REPORT.md`
-- `SCENARIO_E2E_VALIDATION.md`
-- `HOOKS_AGENTS_TEST_REPORT.md`
-- `SUBAGENT_DELEGATION_TEST_REPORT.md`
+- `skills/` — OpenClaw-compatible ECC skill pack
+- `scripts/` — install, validation, and compatibility tooling
+- `contexts/`, `hooks/`, `mcp-configs/`, `schemas/` — runtime compatibility assets
+- `tests/acceptance/` — scenario/acceptance suites (core20/core60/core95/compat)
+- `tests/regression/` — baseline snapshots
+- `upstream/` — attribution/source sync metadata
+- `upstream-import/` and `upstream-archive/` — selective imports + archived harness-specific surfaces
 
 ---
 
-## Compatibility model (important)
+## Compatibility Philosophy
 
-SuperClaw targets **behavioral compatibility**, not harness-by-harness byte cloning.
+SuperClaw targets **behavioral compatibility** with ECC patterns in OpenClaw.
 
-- ECC commands → OpenClaw command skills
-- ECC agents → OpenClaw role skills
-- ECC rules/hooks/MCP intent → OpenClaw-native runtime layers
-- Harness-specific internals are selectively adapted/archived
+- ✅ Port/adapt: skills, workflow commands, role behaviors, rules intent, hook intent, MCP profiles
+- ⚠️ Archive/skip by default: harness-locked internals (`.claude`, `.cursor`, `.codex`, `.opencode`, etc.)
 
-Read:
+See:
 - `COMPATIBILITY.md`
 - `COMPATIBILITY_CLOSURE_MATRIX.md`
 - `HARNESS_TRANSLATION_MATRIX.md`
 
 ---
 
-## Acknowledgements
+## Credits
 
-SuperClaw is built on adapted patterns from:
-- **Everything Claude Code** — <https://github.com/affaan-m/everything-claude-code>
-- **agency-agents** — <https://github.com/msitarzewski/agency-agents>
+- Original concept and source patterns: **Everything Claude Code** by @affaan-m
+- SuperClaw adaptation and OpenClaw integration: this repository
 
-Traceability:
+---
+
+## License & Attribution
+
+Use in accordance with upstream and local licensing/attribution files:
 - `upstream/NOTICE`
-- `upstream/SOURCE_PIN.txt`
-- `upstream-import/agency-agents/SOURCE_PIN.txt`
-- `upstream-import/agency-agents/NOTICE.md`
-
----
-
-## For contributors
-
-Before opening a PR:
-
-```bash
-bash scripts/run-compat-smoke.sh
-bash scripts/run-compat-acceptance.sh
-```
-
-Keep changes OpenClaw-native and avoid introducing harness lock-in.
-
----
-
-## License
-
-See:
 - `LICENSE.upstream`
-- `upstream/NOTICE`

@@ -1,0 +1,3 @@
+repo: https://github.com/alirezarezvani/claude-skills.git
+commit: 3c34297a6b0aaa2b06d510acc7ab29f91b13a877
+license: MIT
