@@ -1,5 +1,11 @@
 # SuperClaw 🦞
 
+[![Repo](https://img.shields.io/badge/repo-SuperClaw-111827?logo=github)](https://github.com/oabdelmaksoud/SuperClaw)
+[![License](https://img.shields.io/badge/license-MIT-success)](./LICENSE.upstream)
+[![OpenClaw](https://img.shields.io/badge/runtime-OpenClaw-0ea5e9)](https://docs.openclaw.ai)
+[![Install Wizard](https://img.shields.io/badge/install-wizard-blueviolet)](./scripts/install-wizard.sh)
+[![Compat](https://img.shields.io/badge/compat-ECC%20%2B%20Agency-22c55e)](#compatibility-model-important)
+
 **Turn OpenClaw into an execution-grade multi-agent system with ECC + Agency patterns.**
 
 SuperClaw is a high-signal compatibility pack that combines:
@@ -8,6 +14,24 @@ SuperClaw is a high-signal compatibility pack that combines:
 - **OpenClaw-native runtime compatibility** (skills, roles, hooks, MCP profiles, validation suites)
 
 ---
+
+
+```text
+┌──────────────────────┐    +    ┌────────────────────────┐
+│ ECC execution rigor  │         │ Agency domain playbooks│
+│ plan/verify/security │         │ eng/test/strategy/etc. │
+└──────────┬───────────┘         └───────────┬────────────┘
+           │                                   │
+           └──────────────┬────────────────────┘
+                          ▼
+                 ┌────────────────────┐
+                 │   SuperClaw Core   │
+                 │ OpenClaw-native    │
+                 │ skills + runtime   │
+                 └─────────┬──────────┘
+                           ▼
+                Reliable multi-agent execution
+```
 
 ## Why people use SuperClaw
 
@@ -47,6 +71,21 @@ SuperClaw gives you both:
 - `ecc-agency-spatial-computing`
 
 ---
+
+
+## Start here
+
+If you only do one thing:
+
+```bash
+bash scripts/install-wizard.sh
+```
+
+Then run:
+
+```bash
+bash scripts/run-compat-smoke.sh
+```
 
 ## 60-second install
 
