@@ -1,0 +1,37 @@
+name: upstream-sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * 1,4' # Mon/Thu 12:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run upstream sync
+        run: |
+          bash scripts/sync-all-upstreams.sh
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore(sync): automated upstream refresh"
+          title: "chore(sync): automated upstream refresh"
+          body: |
+            Automated upstream sync run.
+
+            See `SYNC_CHANGELOG.md` for source deltas.
+          branch: chore/auto-upstream-sync
+          delete-branch: true

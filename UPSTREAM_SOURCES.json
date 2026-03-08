@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "id": "ecc",
+      "repo": "https://github.com/affaan-m/everything-claude-code.git",
+      "branch": "main",
+      "pinFile": "upstream/SOURCE_PIN.txt"
+    },
+    {
+      "id": "agency-agents",
+      "repo": "https://github.com/msitarzewski/agency-agents.git",
+      "branch": "main",
+      "pinFile": "upstream-import/agency-agents/SOURCE_PIN.txt"
+    },
+    {
+      "id": "claude-skills",
+      "repo": "https://github.com/alirezarezvani/claude-skills.git",
+      "branch": "main",
+      "pinFile": "upstream-import/claude-skills/SOURCE_PIN.txt"
+    },
+    {
+      "id": "anthropic-skills",
+      "repo": "https://github.com/anthropics/skills.git",
+      "branch": "main",
+      "pinFile": "upstream-import/anthropic-skills/SOURCE_PIN.txt"
+    }
+  ]
+}
