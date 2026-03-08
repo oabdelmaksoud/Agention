@@ -1,0 +1,351 @@
+# Instincts generated from https://github.com/oabdelmaksoud/Agention
+# Generated: 2026-03-08T13:19:50.416Z
+# Version: 2.0
+
+---
+id: Agention-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 69 chars
+- Based on 27 commits
+
+---
+id: Agention-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: Agention-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Agention-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Test Framework
+
+## Action
+
+Use unknown as the test framework
+
+## Evidence
+
+- Test framework detected: unknown
+- File pattern: *.test.js
+
+---
+id: Agention-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.js
+
+## Evidence
+
+- File pattern: *.test.js
+- Consistent across test files
+
+---
+id: Agention-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: yes
+
+---
+id: Agention-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: **/schema.*, migrations/*
+
+---
+id: Agention-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~13x per month
+- Files: **/*.test.*, **/api/**
+
+---
+id: Agention-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: Agention-workflow-rebranding-workflow
+trigger: "when doing rebranding workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Rebranding Workflow
+
+## Action
+
+Follow the rebranding-workflow workflow:
+1. Update README with new branding
+2. Add/update logo assets
+3. Update documentation files
+4. Modify configuration scripts
+5. Update upstream sync references
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: README.md, assets/logo.svg, scripts/*.sh
+
+---
+id: Agention-workflow-bridge-skill-integration
+trigger: "when doing bridge skill integration"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Bridge Skill Integration
+
+## Action
+
+Follow the bridge-skill-integration workflow:
+1. Create mapping matrix document
+2. Generate bridge skills with SKILL.md files
+3. Add upstream path references
+4. Create integration plan
+5. Update inventory and notices
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: *_MAPPING_MATRIX.md, skills/ecc-**/SKILL.md, skills/ecc-**/references/upstream-path.txt
+
+---
+id: Agention-workflow-quality-gate-workflow
+trigger: "when doing quality gate workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Quality Gate Workflow
+
+## Action
+
+Follow the quality-gate-workflow workflow:
+1. Create/update quality contract
+2. Run skill validation scripts
+3. Generate quality reports
+4. Update validation workflows
+5. Create bridge routing tests
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: SKILL_QUALITY_CONTRACT.md, SKILL_QUALITY_PASS_REPORT.md, scripts/validate-*.sh
+
+---
+id: Agention-workflow-documentation-enhancement
+trigger: "when doing documentation enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Documentation Enhancement
+
+## Action
+
+Follow the documentation-enhancement workflow:
+1. Rebuild README structure
+2. Add feature matrices and CTAs
+3. Update installation guides
+4. Enhance compatibility documentation
+5. Add acknowledgements
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, INSTALL.md, COMPATIBILITY.md
+
+---
+id: Agention-workflow-policy-enforcement-workflow
+trigger: "when doing policy enforcement workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Policy Enforcement Workflow
+
+## Action
+
+Follow the policy-enforcement-workflow workflow:
+1. Create/update policy documents
+2. Add delegation rules
+3. Define operational enforcement
+4. Update README with policy references
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: OPERATIONAL_ENFORCEMENT.md, SUBAGENT_POLICY.md, README.md
+
+---
+id: Agention-workflow-upstream-sync-automation
+trigger: "when doing upstream sync automation"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/oabdelmaksoud/Agention
+---
+
+# Agention Workflow Upstream Sync Automation
+
+## Action
+
+Follow the upstream-sync-automation workflow:
+1. Create sync workflow
+2. Configure upstream sources
+3. Add sync scripts
+4. Create changelog tracking
+5. Set up scheduled PRs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .github/workflows/upstream-sync.yml, UPSTREAM_SOURCES.json, scripts/sync-*.sh
+
