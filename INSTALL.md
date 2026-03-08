@@ -22,8 +22,21 @@ Run:
 bash scripts/install-wizard.sh
 ```
 
-Non-interactive mode:
+Useful modes:
 
 ```bash
+# non-interactive
 NONINTERACTIVE=1 bash scripts/install-wizard.sh
+
+# choose MCP profile
+bash scripts/install-wizard.sh --profile strict
+
+# dry run
+bash scripts/install-wizard.sh --dry-run
+
+# status only
+bash scripts/install-wizard.sh --status
+
+# uninstall
+bash scripts/install-wizard.sh --uninstall
 ```
