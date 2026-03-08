@@ -1,185 +1,289 @@
-# SuperClaw
+# SuperClaw 🦞
 
-SuperClaw is an OpenClaw-native compatibility pack that brings high-value workflow patterns from **Everything Claude Code (ECC)** into a reusable OpenClaw setup.
+**The OpenClaw power-pack for serious agent execution.**
 
-> **Acknowledgement:** This project is deeply inspired by and adapted from [`affaan-m/everything-claude-code`](https://github.com/affaan-m/everything-claude-code). See `upstream/NOTICE` and `upstream/SOURCE_PIN.txt` for attribution and source pinning.
+SuperClaw combines:
+- **ECC-style execution rigor** (plan → implement → verify → harden)
+- **Agency-style domain playbooks** (engineering, testing, strategy, product, design, marketing, support)
+- **Anthropic/Claude skill ecosystems** adapted into OpenClaw-native workflows
 
----
-
-## What SuperClaw Includes
-
-- **121 ECC-derived OpenClaw skills**
-  - command skills (`ecc-cmd-*`)
-  - role skills (`ecc-role-*`)
-  - domain skills (`ecc-*`)
-- **OpenClaw-compatible runtime layers**
-  - contexts (`contexts/`)
-  - hook intent mapping (`hooks/`)
-  - MCP profiles via mcporter (`mcp-configs/`)
-  - schemas (`schemas/`)
-- **Validation + operations scripts**
-  - verify / quality gate / security scan / eval
-  - acceptance runners
-  - compatibility smoke runners
-  - install wizard
+If you want your OpenClaw setup to be reliable, scalable, and testable — this is the pack.
 
 ---
 
-## Why this exists
+## Why SuperClaw
 
-ECC contains strong operational patterns (planning, verification, security discipline, orchestration). SuperClaw translates those patterns into **OpenClaw-native behavior** instead of trying to clone harness-specific internals 1:1.
+Most agent stacks are either:
+1. great prompts + weak execution discipline, or
+2. strong architecture + weak domain depth.
 
-This gives you practical compatibility where it matters:
-- same workflow intent
-- OpenClaw tooling and execution model
-- reproducible checks and reports
+SuperClaw gives you both:
+- execution backbone
+- domain specialization
+- runtime compatibility
+- validation and sync automation
 
 ---
 
-## Install (Recommended)
+## 🚀 Quick Start (2 minutes)
 
 ```bash
+git clone https://github.com/oabdelmaksoud/SuperClaw.git
+cd SuperClaw
 bash scripts/install-wizard.sh
 ```
 
-The wizard can:
-- install skills globally to `~/.openclaw/skills`
-- sync runtime assets to `~/.openclaw/ecc-runtime`
-- apply MCP profile through mcporter
-- run quick validation checks
-
-### Non-interactive mode
+Then refresh OpenClaw session (`/new`) and run:
 
 ```bash
-NONINTERACTIVE=1 bash scripts/install-wizard.sh
+bash scripts/run-compat-smoke.sh
 ```
 
 ---
 
-## Manual Install
+## What you get
 
-```bash
-mkdir -p ~/.openclaw/skills
-rsync -a --delete skills/ ~/.openclaw/skills/
+### 1) Large skill ecosystem
+- ECC-derived command/role/domain skills
+- Bridge skills from:
+  - `agency-agents`
+  - `claude-skills`
+  - `anthropics/skills`
 
-bash scripts/integrate-openclaw-runtime.sh
-bash scripts/apply-mcporter-profile.sh standard
-```
+### 2) Runtime compatibility assets
+- `contexts/` (dev/research/review)
+- `hooks/` (hook-intent mapping)
+- `mcp-configs/` (mcporter profiles)
+- `schemas/` (validation contracts)
 
-Then start a new OpenClaw session (`/new`) to refresh skill discovery.
+### 3) Automation + safety tooling
+- install/uninstall/status wizard
+- full test sweep runner
+- quality + schema + description validators
+- upstream auto-sync workflow
 
 ---
 
-## Validate Installation
+## Architecture at a glance
+
+```text
+                   Upstream Sources
+     ECC + agency-agents + claude-skills + anthropics/skills
+                               |
+                               v
++----------------------------------------------------------------+
+|                           SuperClaw                             |
+|----------------------------------------------------------------|
+| skills/          -> OpenClaw-ready skill pack                  |
+| scripts/         -> install, test, sync, enforcement tooling   |
+| contexts/hooks   -> runtime behavior layer                      |
+| mcp-configs      -> mcporter profiles                           |
+| tests/           -> acceptance + scenario + regression          |
+| upstream-import/ -> traceable source snapshots                  |
++----------------------------------------------------------------+
+                               |
+                               v
+                    OpenClaw runtime execution
+```
+
+---
+
+## Feature matrix
+
+| Capability | Included | How to use |
+|---|---|---|
+| Install wizard | ✅ | `bash scripts/install-wizard.sh` |
+| Core/full skill pack control | ✅ | `bash scripts/skills-pack-manager.sh {apply-core|apply-full|status}` |
+| Compatibility smoke test | ✅ | `bash scripts/run-compat-smoke.sh` |
+| Full scenario sweep | ✅ | `bash scripts/run-all-tests.sh` |
+| Agent/role scenario tests | ✅ | `bash scripts/run-agent-scenarios.sh AGENT_SCENARIO_MATRIX.md` |
+| Upstream auto-sync | ✅ | `bash scripts/sync-all-upstreams.sh` + GitHub workflow |
+| Subagent delegation policy | ✅ | `SUBAGENT_POLICY.md` + `OPERATIONAL_ENFORCEMENT.md` |
+
+---
+
+## Install wizard (advanced)
 
 ```bash
-openclaw skills info ecc-cmd-plan
+# Non-interactive install
+NONINTERACTIVE=1 bash scripts/install-wizard.sh --profile standard
+
+# Dry-run
+bash scripts/install-wizard.sh --dry-run
+
+# Status check
+bash scripts/install-wizard.sh --status
+
+# Skip optional pieces
+bash scripts/install-wizard.sh --skip-mcp --skip-validate
+
+# Uninstall
+bash scripts/install-wizard.sh --uninstall
+```
+
+---
+
+## Validation suite
+
+### Fast baseline
+```bash
 bash scripts/run-compat-smoke.sh
 bash scripts/run-compat-acceptance.sh
 ```
 
----
+### Full verification
+```bash
+bash scripts/run-all-tests.sh
+```
 
-## Project Structure
-
-- `skills/` — OpenClaw-compatible ECC skill pack
-- `scripts/` — install, validation, and compatibility tooling
-- `contexts/`, `hooks/`, `mcp-configs/`, `schemas/` — runtime compatibility assets
-- `tests/acceptance/` — scenario/acceptance suites (core20/core60/core95/compat)
-- `tests/regression/` — baseline snapshots
-- `upstream/` — attribution/source sync metadata
-- `upstream-import/` and `upstream-archive/` — selective imports + archived harness-specific surfaces
-
----
-
-## Compatibility Philosophy
-
-SuperClaw targets **behavioral compatibility** with ECC patterns in OpenClaw.
-
-- ✅ Port/adapt: skills, workflow commands, role behaviors, rules intent, hook intent, MCP profiles
-- ⚠️ Archive/skip by default: harness-locked internals (`.claude`, `.cursor`, `.codex`, `.opencode`, etc.)
-
-See:
-- `COMPATIBILITY.md`
-- `COMPATIBILITY_CLOSURE_MATRIX.md`
-- `HARNESS_TRANSLATION_MATRIX.md`
+### Deep quality checks
+```bash
+bash scripts/validate-skills.sh
+bash scripts/validate-skill-template.sh
+bash scripts/validate-skill-descriptions.sh
+bash scripts/validate-schemas.sh
+python3 scripts/eval-bridge-routing.py
+```
 
 ---
 
-## Credits
+## Skill pack modes (avoid discovery overload)
 
-- Original concept and source patterns: **Everything Claude Code** by @affaan-m
-- SuperClaw adaptation and OpenClaw integration: this repository
+If your runtime loads too many skills at once, use pack management:
+
+```bash
+# Keep core active, park heavy claude bridge set
+bash scripts/skills-pack-manager.sh apply-core
+
+# Restore everything
+bash scripts/skills-pack-manager.sh apply-full
+
+# Check counts
+bash scripts/skills-pack-manager.sh status
+```
 
 ---
 
-## License & Attribution
+## Auto-update pipeline (stay current)
 
-Use in accordance with upstream and local licensing/attribution files:
-- `upstream/NOTICE`
-- `LICENSE.upstream`
+SuperClaw includes scheduled upstream sync:
+- source manifest: `UPSTREAM_SOURCES.json`
+- sync script: `scripts/sync-all-upstreams.sh`
+- CI workflow: `.github/workflows/upstream-sync.yml`
+- sync report: `SYNC_CHANGELOG.md`
 
-## Skill Quality Program
+Flow:
+1. fetch upstream heads
+2. compare pinned commits
+3. update pin files if changed
+4. run validations
+5. create/update PR automatically
 
-SuperClaw enforces bridge-skill quality via:
-- `SKILL_QUALITY_CONTRACT.md`
-- `scripts/validate-skill-template.sh`
-- `scripts/validate-skill-descriptions.sh`
-- `BRIDGE_ROUTING_REGRESSION.md`
+---
 
+## Proactive subagent delegation
 
-## Proactive Subagent Delegation (Default)
+SuperClaw defaults to proactive subagent usage for complex tasks.
 
-SuperClaw is configured to proactively use subagents for complex tasks (without requiring the user to explicitly ask).
-
-Policy file:
+Policy docs:
 - `SUBAGENT_POLICY.md`
+- `OPERATIONAL_ENFORCEMENT.md`
 
-When delegation is used, outputs should include:
-- which subagents were spawned
-- assigned scope per subagent
+Required in delegated outputs:
+- subagents spawned
+- scope per subagent
 - result per subagent
-- merged final outcome
+- merged final decision
 
+---
+
+## Common use-cases
+
+- Standardize delivery quality across many OpenClaw sessions
+- Add enterprise-style plan/verify/review loops
+- Run bridge skills for strategy, PM, testing, design, and GTM workflows
+- Keep your plugin evergreen via upstream sync automation
+
+---
+
+## Roadmap
+
+- Improve routing regression corpus breadth
+- Expand external clean-machine validation matrix
+- Add release-channel strategy (stable/canary)
+- Publish optional one-command installer wrapper
+
+---
+
+## FAQ
+
+**Is this a 1:1 clone of ECC/Agency/Claude internals?**  
+No. SuperClaw targets **behavioral compatibility** in OpenClaw, not harness byte-parity.
+
+**Will this overload OpenClaw with too many skills?**  
+Use `skills-pack-manager.sh` to keep a lean active pack.
+
+**How do I verify it actually works?**  
+Run `bash scripts/run-all-tests.sh` and inspect `FULL_TEST_SWEEP_REPORT.md`.
+
+**Can it self-update from upstream repos?**  
+Yes — via `sync-all-upstreams.sh` and scheduled GitHub workflow.
 
 ---
 
 ## Acknowledgements
 
-SuperClaw is built from adapted ideas, patterns, and references from these repositories:
+SuperClaw is built with adapted ideas/patterns from:
 
 1. **Everything Claude Code (ECC)**  
    https://github.com/affaan-m/everything-claude-code
-
 2. **agency-agents**  
    https://github.com/msitarzewski/agency-agents
-
 3. **claude-skills**  
    https://github.com/alirezarezvani/claude-skills
-
 4. **anthropics/skills**  
    https://github.com/anthropics/skills
 
-We deeply appreciate the original authors and maintainers for publishing these resources.
-
-Traceability and attribution files in this repo:
+Traceability files:
 - `upstream/NOTICE`
 - `upstream/SOURCE_PIN.txt`
-- `upstream-import/agency-agents/SOURCE_PIN.txt`
-- `upstream-import/agency-agents/NOTICE.md`
-- `upstream-import/claude-skills/SOURCE_PIN.txt`
-- `upstream-import/claude-skills/NOTICE.md`
-- `upstream-import/anthropic-skills/SOURCE_PIN.txt`
-- `upstream-import/anthropic-skills/NOTICE.md`
+- `upstream-import/agency-agents/*`
+- `upstream-import/claude-skills/*`
+- `upstream-import/anthropic-skills/*`
 
+---
 
-## Operational Enforcement
+## Contributing
 
-SuperClaw enforces execution discipline via:
-- `SUBAGENT_POLICY.md`
-- `OPERATIONAL_ENFORCEMENT.md`
+PRs are welcome. Before submitting:
 
-Key rules:
-- Delegate proactively on complex tasks
-- Include delegation summary when delegation is used
-- Mention changes only when changes actually happened
+```bash
+bash scripts/run-compat-smoke.sh
+bash scripts/run-compat-acceptance.sh
+bash scripts/run-all-tests.sh
+```
+
+Please keep changes OpenClaw-native and avoid reintroducing harness lock-in.
+
+---
+
+## License
+
+See:
+- `LICENSE.upstream`
+- `upstream/NOTICE`
+
+---
+
+## Start now
+
+```bash
+bash scripts/install-wizard.sh
+bash scripts/run-compat-smoke.sh
+```
+
+If you want, run full confidence mode after that:
+
+```bash
+bash scripts/run-all-tests.sh
+```
