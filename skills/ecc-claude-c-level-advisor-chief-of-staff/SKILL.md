@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-c-level-advisor-chief-of-staff
-description: "OpenClaw bridge skill for c level advisor chief of staff. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for c level advisor chief of staff. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-c-level-advisor-chief-of-staff

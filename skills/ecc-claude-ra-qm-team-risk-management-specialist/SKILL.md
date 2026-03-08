@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-ra-qm-team-risk-management-specialist
-description: "OpenClaw bridge skill for ra qm team risk management specialist. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for ra qm team risk management specialist. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-ra-qm-team-risk-management-specialist

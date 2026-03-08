@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-marketing-skill-referral-program
-description: "OpenClaw bridge skill for marketing skill referral program. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for marketing skill referral program. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-marketing-skill-referral-program

@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-engineering-team-playwright-pro
-description: "OpenClaw bridge skill for engineering team playwright pro. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for Claude webapp testing with Playwright Pro. Use when requests involve claude webapp testing, UI regression checks, browser automation, or end-to-end web testing with explicit verification."
 ---
 
 # ecc-claude-engineering-team-playwright-pro

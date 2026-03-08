@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-business-growth-customer-success-manager
-description: "OpenClaw bridge skill for business growth customer success manager. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for business growth customer success manager. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-business-growth-customer-success-manager

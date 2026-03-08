@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-engineering-codebase-onboarding
-description: "OpenClaw bridge skill for engineering codebase onboarding. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for engineering codebase onboarding. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-engineering-codebase-onboarding

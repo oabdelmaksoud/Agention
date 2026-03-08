@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-product-team-landing-page-generator
-description: "OpenClaw bridge skill for product team landing page generator. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for product team landing page generator. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-product-team-landing-page-generator

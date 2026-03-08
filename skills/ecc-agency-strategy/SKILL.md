@@ -1,6 +1,6 @@
 ---
 name: ecc-agency-strategy
-description: "OpenClaw bridge skill for strategy. Use when tasks match this specialized agency-agents capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for agency strategy. Use when requests involve agency strategy, market positioning, strategic options, or go-to-market direction and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-agency-strategy

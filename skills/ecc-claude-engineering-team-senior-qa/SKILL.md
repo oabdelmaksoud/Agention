@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-engineering-team-senior-qa
-description: "OpenClaw bridge skill for engineering team senior qa. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for engineering team senior qa. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-engineering-team-senior-qa

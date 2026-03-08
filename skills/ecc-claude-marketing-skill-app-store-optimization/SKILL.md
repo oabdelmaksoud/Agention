@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-marketing-skill-app-store-optimization
-description: "OpenClaw bridge skill for marketing skill app store optimization. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for marketing skill app store optimization. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-marketing-skill-app-store-optimization

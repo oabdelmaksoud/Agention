@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-marketing-skill-form-cro
-description: "OpenClaw bridge skill for marketing skill form cro. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for marketing skill form cro. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-marketing-skill-form-cro

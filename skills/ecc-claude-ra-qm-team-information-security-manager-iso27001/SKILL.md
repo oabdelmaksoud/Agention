@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-ra-qm-team-information-security-manager-iso27001
-description: "OpenClaw bridge skill for ra qm team information security manager iso27001. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for ra qm team information security manager iso27001. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-ra-qm-team-information-security-manager-iso27001

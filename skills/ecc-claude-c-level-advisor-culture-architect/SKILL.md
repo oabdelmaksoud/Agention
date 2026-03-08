@@ -1,6 +1,6 @@
 ---
 name: ecc-claude-c-level-advisor-culture-architect
-description: "OpenClaw bridge skill for c level advisor culture architect. Use when tasks match this specialized anthropic skills capability and need OpenClaw-native execution with explicit verification."
+description: "OpenClaw bridge skill for c level advisor culture architect. Use when tasks match this specialized claude-skills capability and need OpenClaw-native execution with explicit verification."
 ---
 
 # ecc-claude-c-level-advisor-culture-architect
