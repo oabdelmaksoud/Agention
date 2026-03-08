@@ -1,0 +1,8 @@
+{
+  "samples": [
+    {"prompt":"Use agency strategy to build market positioning options", "must_match_prefix":"ecc-agency-"},
+    {"prompt":"Use anthropic mcp-builder style guidance for MCP eval", "must_match_prefix":"ecc-anthropic-"},
+    {"prompt":"Use claude webapp testing guidance for UI regression checks", "must_match_prefix":"ecc-claude-"},
+    {"prompt":"Plan and verify a multi-step backend migration", "must_match_prefix":"ecc-cmd-"}
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: ecc-anthropic-template-skill
-description: "Bridge skill for anthropics/skills template skill. Use as a canonical baseline when creating new OpenClaw-compatible skills from template guidance."
+description: "Bridge skill for anthropics/skills template skill. Use when creating or refining OpenClaw-compatible skills from template guidance with clear trigger descriptions and structured sections."
 ---
 
 # ecc-anthropic-template-skill

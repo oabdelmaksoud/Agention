@@ -118,3 +118,12 @@ See:
 Use in accordance with upstream and local licensing/attribution files:
 - `upstream/NOTICE`
 - `LICENSE.upstream`
+
+## Skill Quality Program
+
+SuperClaw enforces bridge-skill quality via:
+- `SKILL_QUALITY_CONTRACT.md`
+- `scripts/validate-skill-template.sh`
+- `scripts/validate-skill-descriptions.sh`
+- `BRIDGE_ROUTING_REGRESSION.md`
+
