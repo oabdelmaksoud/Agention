@@ -118,3 +118,25 @@ See:
 Use in accordance with upstream and local licensing/attribution files:
 - `upstream/NOTICE`
 - `LICENSE.upstream`
+
+## Additional Acknowledgement: agency-agents
+
+SuperClaw also incorporates adapted patterns from:
+- https://github.com/msitarzewski/agency-agents
+
+Integrated bridge-skill families include:
+- ecc-agency-engineering
+- ecc-agency-testing
+- ecc-agency-strategy
+- ecc-agency-project-management
+- ecc-agency-marketing
+- ecc-agency-design
+- ecc-agency-support
+- ecc-agency-product
+- ecc-agency-spatial-computing
+
+Traceability:
+- AGENCY_AGENTS_INTEGRATION_PLAN.md
+- AGENCY_AGENTS_MAPPING_MATRIX.md
+- upstream-import/agency-agents/SOURCE_PIN.txt
+- upstream-import/agency-agents/NOTICE.md
