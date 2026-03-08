@@ -1,6 +1,6 @@
 # OPERATIONAL_ENFORCEMENT
 
-This file defines mandatory execution behavior for SuperClaw operations.
+This file defines mandatory execution behavior for Agention operations.
 
 ## 1) Subagent Trigger Rule (MANDATORY)
 

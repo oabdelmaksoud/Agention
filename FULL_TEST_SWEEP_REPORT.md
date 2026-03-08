@@ -4,7 +4,7 @@
 - Status: PASS
 - Exit: 0
 ```
-📊 SuperClaw status
+📊 Agention status
 - Global skills dir: /Users/omarabdelmaksoud/.openclaw/skills (ecc-* count: 148)
 - Runtime assets dir: /Users/omarabdelmaksoud/.openclaw/ecc-runtime (present)
 - MCP config: /Users/omarabdelmaksoud/.openclaw/workspace/config/mcporter.json (present)

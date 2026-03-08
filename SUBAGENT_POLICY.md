@@ -1,6 +1,6 @@
 # SUBAGENT_POLICY
 
-SuperClaw default policy: **proactive subagent delegation for complex tasks**.
+Agention default policy: **proactive subagent delegation for complex tasks**.
 
 ## Default behavior
 

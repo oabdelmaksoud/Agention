@@ -1,7 +1,7 @@
 # AGENCY_AGENTS_INTEGRATION_PLAN
 
 ## Goal
-Integrate high-value portable patterns from agency-agents into SuperClaw/OpenClaw-native skills.
+Integrate high-value portable patterns from agency-agents into Agention/OpenClaw-native skills.
 
 ## Source
 - Repo: https://github.com/msitarzewski/agency-agents
@@ -31,7 +31,7 @@ Integrate high-value portable patterns from agency-agents into SuperClaw/OpenCla
 
 ## Execution Phases
 
-1. **Audit & map** each area to existing SuperClaw skills (or mark as new skill needed).
+1. **Audit & map** each area to existing Agention skills (or mark as new skill needed).
 2. **Import references** into `upstream-import/agency-agents/references/` by area.
 3. **Create new skill families** only for gaps (support/product/spatial-computing).
 4. **Add scenario tests** for any newly added skills.

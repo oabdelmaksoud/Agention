@@ -7,7 +7,7 @@ SKILLS_SRC="$ROOT/skills"
 GLOBAL_SKILLS_DIR="$HOME/.openclaw/skills"
 RUNTIME_TARGET="$HOME/.openclaw/ecc-runtime"
 MCP_CONFIG="$HOME/.openclaw/workspace/config/mcporter.json"
-CONFIG_FILE="$HOME/.openclaw/superclaw-config.json"
+CONFIG_FILE="$HOME/.openclaw/agention-config.json"
 BACKUP_DIR="$HOME/.openclaw/backups"
 
 # Defaults
@@ -53,7 +53,7 @@ PY
 
 usage(){
   cat <<EOF
-SuperClaw Install Wizard v$VERSION
+Agention Install Wizard v$VERSION
 
 Usage:
   bash scripts/install-wizard.sh [options]
@@ -68,8 +68,8 @@ Options:
   --skip-validate            Do not run validation checks
   --dry-run                  Print actions without applying changes
   --status                   Print install/status summary and exit
-  --uninstall                Remove installed SuperClaw assets
-  --version-check            Check for newer SuperClaw version
+  --uninstall                Remove installed Agention assets
+  --version-check            Check for newer Agention version
   -h, --help                Show this help
 
 Config:
@@ -104,7 +104,7 @@ run(){
 }
 
 version_check(){
-  say "🔍 Checking for SuperClaw updates..."
+  say "🔍 Checking for Agention updates..."
   LATEST="$VERSION"
   say "- Current version: $VERSION"
   say "- Latest known: $LATEST"
@@ -126,7 +126,7 @@ backup(){
 }
 
 status(){
-  say "📊 SuperClaw status (v$VERSION)"
+  say "📊 Agention status (v$VERSION)"
   local skill_count=0
   [[ -d "$GLOBAL_SKILLS_DIR" ]] && skill_count=$(find "$GLOBAL_SKILLS_DIR" -maxdepth 1 -mindepth 1 -type d -name 'ecc-*' | wc -l | tr -d ' ')
   say "- Skills: $GLOBAL_SKILLS_DIR (ecc-* count: $skill_count)"
@@ -139,7 +139,7 @@ status(){
 }
 
 uninstall(){
-  say "🧹 SuperClaw uninstall"
+  say "🧹 Agention uninstall"
   [[ -d "$GLOBAL_SKILLS_DIR" ]] && { run "find '$GLOBAL_SKILLS_DIR' -maxdepth 1 -mindepth 1 -type d -name 'ecc-*' -exec rm -rf {} +"; ok "Removed ecc-* skills"; }
   [[ -d "$RUNTIME_TARGET" ]] && { run "rm -rf '$RUNTIME_TARGET'"; ok "Removed runtime assets"; }
   [[ -f "$MCP_CONFIG" ]] && { run "rm -f '$MCP_CONFIG'"; ok "Removed MCP config"; }
@@ -176,7 +176,7 @@ case "$MODE" in
   save-config) save_config; ok "Config saved to $CONFIG_FILE"; exit 0 ;;
 esac
 
-say "🧩 SuperClaw Install Wizard v$VERSION"
+say "🧩 Agention Install Wizard v$VERSION"
 say "Source: $ROOT"
 
 [[ ! -d "$SKILLS_SRC" ]] && { say "❌ skills/ not found at $SKILLS_SRC"; exit 1; }
@@ -190,7 +190,7 @@ fi
 
 # Install skills (selective families, parallel)
 if [[ "$DO_SKILLS" == "1" ]]; then
-  if [[ "$NONINTERACTIVE" == "1" ]] || ask "Install SuperClaw skills? (families: $SKILL_FAMILIES)" y; then
+  if [[ "$NONINTERACTIVE" == "1" ]] || ask "Install Agention skills? (families: $SKILL_FAMILIES)" y; then
     run "mkdir -p '$GLOBAL_SKILLS_DIR'"
     for fam in $(echo "$SKILL_FAMILIES" | tr ',' ' '); do
       src="$SKILLS_SRC/$fam"

@@ -1,6 +1,6 @@
 # AGENCY_AGENTS_MAPPING_MATRIX
 
-| Source File | Action | Target SuperClaw Surface | Notes |
+| Source File | Action | Target Agention Surface | Notes |
 |---|---|---|---|
 | `engineering/engineering-ai-engineer.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-orchestrate, ecc-cmd-verify, ecc-role-architect, ecc-role-planner | import to agency references + optional bridge skill |
 | `engineering/engineering-backend-architect.md` | adapt-reference | ecc-cmd-plan, ecc-cmd-orchestrate, ecc-cmd-verify, ecc-role-architect, ecc-role-planner | import to agency references + optional bridge skill |

@@ -1,4 +1,4 @@
-# Agention ⚡
+# Agention ⚡ ⚡
 [![Agention Logo](./assets/logo.svg)](https://github.com/oabdelmaksoud/Agention)
  for OpenClaw
 
