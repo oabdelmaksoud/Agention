@@ -34,3 +34,8 @@ Every delegated task should include a summary block:
 - No destructive actions without explicit confirmation.
 - Preserve OpenClaw safety/tool policies.
 - If delegation infra is unavailable, continue in single-agent mode and note fallback.
+
+
+## Enforcement
+
+Operational enforcement checklist: `OPERATIONAL_ENFORCEMENT.md`

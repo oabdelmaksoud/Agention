@@ -172,3 +172,14 @@ Traceability and attribution files in this repo:
 - `upstream-import/anthropic-skills/SOURCE_PIN.txt`
 - `upstream-import/anthropic-skills/NOTICE.md`
 
+
+## Operational Enforcement
+
+SuperClaw enforces execution discipline via:
+- `SUBAGENT_POLICY.md`
+- `OPERATIONAL_ENFORCEMENT.md`
+
+Key rules:
+- Delegate proactively on complex tasks
+- Include delegation summary when delegation is used
+- Mention changes only when changes actually happened
